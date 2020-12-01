@@ -1,0 +1,49 @@
+﻿<Window x:Class="Laba_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laba_2"
+        mc:Ignorable="d"
+        Title="Лабораторная работа 2 Дробот К.С." Height="619" Width="1284">
+    <Grid Background="White" Margin="0,0,0,1">
+        <DataGrid x:Name="dangerGrid" AutoGenerateColumns="False"  Margin="0,0,0,35">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="Collum1"  Header="Идентификатор угрозы" Binding="{Binding Path=Id}" Width="Auto" />
+                <DataGridTextColumn x:Name="Collum2"  Header="Наименования угрозы" Binding="{Binding Path=Name}" Width="Auto" />
+                <DataGridTextColumn x:Name="Collum3"  Header="Описание угрозы" Binding="{Binding Path=Description}" Width="Auto" />
+                <DataGridTextColumn x:Name="Collum4"  Header="Источник угрозы" Binding="{Binding Path=Sourse}" Width="Auto" />
+                <DataGridTextColumn x:Name="Collum5"  Header="Объект воздействия угрозы" Binding="{Binding Path=Target}" Width="Auto" />
+                <DataGridTextColumn x:Name="Collum6"  Header="Нарушение конфиденциальности" Binding="{Binding Path=Confidentiality}" Width="Auto" />
+                <DataGridTextColumn x:Name="Collum7"  Header="Нарушение целостности" Binding="{Binding Path=Integrity}" Width="Auto" />
+                <DataGridTextColumn x:Name="Collum8"  Header="Нарушение доступности" Binding="{Binding Path=Access}" Width="Auto" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Border  VerticalAlignment="Bottom">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="139*"/>
+                    <ColumnDefinition Width="181*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Обновить" HorizontalAlignment="Left"  Width="75" Height="20" VerticalAlignment="Bottom" Click="Button_Click_Update" Margin="10,0,0,0"/>
+                <Button Content="Сохранить" HorizontalAlignment="Left" Margin="101,0,0,0" Width="75" Height="20" VerticalAlignment="Bottom" Click="Button_Click_Save"/>
+                <CheckBox Content="Подробный режим" HorizontalAlignment="Left" Margin="200,5,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                <CheckBox Content="Было-стало" HorizontalAlignment="Left" Margin="350,5,0,0" Checked="CheckBox_Checked_Vs" Unchecked="CheckBox_Unchecked_Vs"/>
+                <Button Content="Вперед" HorizontalAlignment="Left" Margin="413,0,0,0" Width="75" Click="Button_Click_Next" Grid.Column="1"/>
+                <Button Content="Назад" HorizontalAlignment="Left" Margin="330,0,0,0" Width="75" Click="Button_Click_Back" Grid.Column="1"/>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+
+
+
+
+
+
+
+</Window>
